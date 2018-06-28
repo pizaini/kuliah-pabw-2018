@@ -6,6 +6,7 @@
  */
 ?>
     <h1>Data Mahasiswa</h1>
+<a href="index.php?module=mahasiswa&page=insert">Tambah data</a>
 <?php
 $statement = $connection->prepare('select * from MAHASISWA');
 $result = null;

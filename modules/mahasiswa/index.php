@@ -1,13 +1,13 @@
 <?php
 /**
  * Created by Pizaini <pizaini@uin-suska.ac.id>
- * Date: 31/05/2018
- * Time: 11:50
+ * Date: 07/06/2018
+ * Time: 11:14
  */
 ?>
-<h1>Data Employe sample</h1>
+    <h1>Data Mahasiswa</h1>
 <?php
-$statement = $connection->prepare('select * from EMP');
+$statement = $connection->prepare('select * from MAHASISWA');
 $result = null;
 try{
     $statement->execute();
@@ -18,7 +18,8 @@ try{
 ?>
 <?php foreach ($result as $item):?>
     <p>
-        <?=$item->ENAME?>
-        <?=$item->HIREDATE?>
+        <?=$item->NIM?>
+        <?=$item->NAMA?>
+        <?=$item->TANGGAL_LAHIR?>
     </p>
 <?php endforeach;?>

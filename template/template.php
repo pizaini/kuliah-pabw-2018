@@ -11,6 +11,11 @@
     <title>This is title</title>
 </head>
 <body>
+<p>Menu:</p>
+<ul>
+    <li><a href="index.php?module=default">Employe</a> </li>
+    <li><a href="index.php?module=mahasiswa">Mahasiswa</a> </li>
+</ul>
 <?php
 if(file_exists($incude)){
     include $incude;

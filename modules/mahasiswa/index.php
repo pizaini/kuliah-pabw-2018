@@ -17,10 +17,26 @@ try{
     die($exc->getMessage());
 }
 ?>
-<?php foreach ($result as $item):?>
-    <p>
-        <?=$item->NIM?>
-        <?=$item->NAMA?>
-        <?=$item->TANGGAL_LAHIR?>
-    </p>
-<?php endforeach;?>
+    <table>
+        <thead>
+        <tr>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Tanggal lahir</th>
+            <th>Edit/delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($result as $item):?>
+        <tr>
+            <td><?=$item->NIM?></td>
+            <td><?=$item->NAMA?></td>
+            <td><?=$item->TANGGAL_LAHIR?></td>
+            <td>
+                <a href="index.php?module=mahasiswa&page=update&nim=<?=$item->NIM?>"> Edit </a> |
+                <a href="index.php?module=mahasiswa&page=delete&nim=<?=$item->NIM?>"> Hapus </a>
+            </td>
+        </tr>
+        <?php endforeach;?>
+        </tbody>
+    </table>

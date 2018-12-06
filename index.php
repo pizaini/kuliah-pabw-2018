@@ -10,7 +10,6 @@ include 'include/connection.php';
 $modules = $_GET['module'] ?? 'default';
 $page = $_GET['page'] ?? 'index';
 
-
 $incude = 'modules/'.$modules.'/'.$page.'.php';
 
 include 'template/template.php';

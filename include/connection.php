@@ -6,9 +6,9 @@
  */
 $connection = null;
 try {
-    $username = 'PABW';
+    $username = 'root';
     $password = 'xxxxxx';
-    $database = 'oci:dbname=//localhost:1521/xe';
+    $database = 'mysql:dbname=kuliah_web;host=localhost';
     $connection = new PDO($database, $username, $password);
     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
